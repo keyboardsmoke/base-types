@@ -25,7 +25,7 @@ using intmax_t = int64_t;
 using uintmax_t = uint64_t;
 using intptr_t = int64_t;
 using uintptr_t = uint64_t;
-#if defined(__i386__) || defined(_M_IX86) || defined(_M_ARM) || defined(__arm__)
+#elif defined(__i386__) || defined(_M_IX86) || defined(_M_ARM) || defined(__arm__)
 using intmax_t = int32_t;
 using uintmax_t = uint32_t;
 using intptr_t = int32_t;
@@ -51,11 +51,13 @@ using intmax_t = long int;
 using uintmax_t = unsigned long long;
 using intptr_t = long;
 using uintptr_t = unsigned long;
-#if defined(__i386__) || defined(_M_IX86) || defined(_M_ARM) || defined(__arm__)
+#elif defined(__i386__) || defined(_M_IX86) || defined(_M_ARM) || defined(__arm__)
 using intmax_t = long long int;
 using uintmax_t = long long unsigned int;
 using intptr_t = long;
 using uintptr_t = unsigned long;
+#else
+#error Unsupported Platform
 #endif
 #endif
 
