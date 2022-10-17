@@ -1,7 +1,7 @@
 #pragma once
 
 #if defined(__STDC__) || defined(_STDINT_H_INCLUDED) || defined(_STDINT_H) || defined(_PSTDINT_H_INCLUDED) || defined(_STDINT)
-#error stdint already defined, why are you including stdint_types.hpp?
+// #error stdint already defined, why are you including stdint_types.hpp?
 #else
 
 // I wanted this header to work without any dependencies, conflicts or pollution
